@@ -23,37 +23,37 @@ resource "azurerm_api_management_logger" "apim-logger" {
   }
 }
 
-// APIM API for PersonalisationMS
-resource "azurerm_api_management_api" "personalisationms-api" {
-  count               = var.deploy_main_resource_group && var.deploy_apim ? 1 : 0
-  api_management_name = azurerm_api_management.apim[count.index].name
-  resource_group_name = azurerm_resource_group.rg-main[count.index].name
-  name                = "personalisationms"
-  revision            = "1"
-  path                = ""
-  version             = var.environment
-  version_set_id      = azurerm_api_management_api_version_set.personalisationms_api_version_set[count.index].id
-  contact {
-    email = var.publisher_email
-    name  = var.publisher_name
-  }
+# // APIM API for PersonalisationMS
+# resource "azurerm_api_management_api" "personalisationms-api" {
+#   count               = var.deploy_main_resource_group && var.deploy_apim ? 1 : 0
+#   api_management_name = azurerm_api_management.apim[count.index].name
+#   resource_group_name = azurerm_resource_group.rg-main[count.index].name
+#   name                = "personalisationms"
+#   revision            = "1"
+#   path                = ""
+#   version             = var.environment
+#   version_set_id      = azurerm_api_management_api_version_set.personalisationms_api_version_set[count.index].id
+#   contact {
+#     email = var.publisher_email
+#     name  = var.publisher_name
+#   }
 
-  display_name = "personalisationms"
-  protocols    = ["https"]
+#   display_name = "personalisationms"
+#   protocols    = ["https"]
 
-  import {
-    content_format = "openapi"
-    content_value  = file("${path.module}/schema/personalisationMS.openapi.yaml")
-  }
-  subscription_required = false
-  service_url           = "https://${azurerm_linux_web_app.personalisation[count.index].default_hostname}/"
-}
+#   import {
+#     content_format = "openapi"
+#     content_value  = file("${path.module}/schema/personalisationMS.openapi.yaml")
+#   }
+#   subscription_required = false
+#   service_url           = "https://${azurerm_linux_web_app.personalisation[count.index].default_hostname}/"
+# }
 
-resource "azurerm_api_management_api_version_set" "personalisationms_api_version_set" {
-  count               = var.deploy_main_resource_group && var.deploy_apim ? 1 : 0
-  name                = "personalisationms"
-  resource_group_name = azurerm_resource_group.rg-main[count.index].name
-  api_management_name = azurerm_api_management.apim[count.index].name
-  display_name        = "personalisationms"
-  versioning_scheme   = "Segment"
-}
+# resource "azurerm_api_management_api_version_set" "personalisationms_api_version_set" {
+#   count               = var.deploy_main_resource_group && var.deploy_apim ? 1 : 0
+#   name                = "personalisationms"
+#   resource_group_name = azurerm_resource_group.rg-main[count.index].name
+#   api_management_name = azurerm_api_management.apim[count.index].name
+#   display_name        = "personalisationms"
+#   versioning_scheme   = "Segment"
+# }
