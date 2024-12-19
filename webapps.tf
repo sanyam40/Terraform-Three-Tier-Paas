@@ -26,12 +26,6 @@ resource "azurerm_linux_web_app" "frontend" {
     APPINSIGHTS_INSTRUMENTATIONKEY             = azurerm_application_insights.appinsights[count.index].instrumentation_key
     APPLICATIONINSIGHTS_CONNECTION_STRING      = azurerm_application_insights.appinsights[count.index].connection_string
     ApplicationInsightsAgent_EXTENSION_VERSION = "~3"
-    APIM_URL                                   = var.Frontend_apim_url
-    AUTH0_BASE_URL                             = var.Frontend_auth0_base_url
-    AUTH0_CLIENT_ID                            = var.Frontend_auth0_client_id
-    AUTH0_CLIENT_SECRET                        = var.Frontend_auth0_client_secret
-    AUTH0_ISSUER_BASE_URL                      = var.Frontend_auth0_issuer_base_url
-    AUTH0_SECRET                               = var.Frontend_auth0_secret
     # DOCKER_REGISTRY_SERVER_PASSWORD=
     # DOCKER_REGISTRY_SERVER_URL=
     # DOCKER_REGISTRY_SERVER_USERNAME=
@@ -71,7 +65,6 @@ resource "azurerm_linux_web_app" "personalisation" {
     APPINSIGHTS_INSTRUMENTATIONKEY             = azurerm_application_insights.appinsights[count.index].instrumentation_key
     APPLICATIONINSIGHTS_CONNECTION_STRING      = azurerm_application_insights.appinsights[count.index].connection_string
     ApplicationInsightsAgent_EXTENSION_VERSION = "~3"
-    MONGO_URL                                  = var.Personalisation_MONGO_URL
     # DOCKER_REGISTRY_SERVER_PASSWORD=
     # DOCKER_REGISTRY_SERVER_URL=
     # DOCKER_REGISTRY_SERVER_USERNAME=

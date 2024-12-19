@@ -12,19 +12,8 @@ variable "tenant_id" {
 # Resources Group Variables
 variable "resource_group_name" {
   type        = string
-  default     = "test"
+  default     = "terraform-sanyam"
   description = "The name of the resource group in which to create the resources"
-}
-
-variable "resource_group_name_core" {
-  type        = string
-  default     = "test-media-core"
-  description = "The name of the resource group in which to create the resources"
-}
-
-variable "deploy_core_resource_group" {
-  type        = bool
-  description = "Whether to deploy the core resource group"
 }
 
 variable "deploy_main_resource_group" {
@@ -61,7 +50,7 @@ variable "deploy_acr" {
 
 variable "acr_name" {
   type        = string
-  default     = "testacr"
+  default     = "sanyamacr"
   description = "The name of the Azure Container Registry"
 }
 
@@ -122,24 +111,6 @@ variable "app_service_plan_sku" {
   type        = string
   default     = "B1"
   description = "The SKU of the app service plan"
-}
-
-# AI Search Service Variables
-variable "deploy_search_service" {
-  type        = bool
-  description = "Whether to deploy the AI Search service"
-}
-
-variable "search_service_name" {
-  type        = string
-  default     = "test-aisearch"
-  description = "The name of the AI Search service"
-}
-
-variable "search_service_sku" {
-  type        = string
-  default     = "basic"
-  description = "The SKU of the AI Search service"
 }
 
 # Web App Variables
@@ -209,37 +180,6 @@ variable "deploy_storage_resources" {
 variable "Frontend_apim_url" {
   type        = string
   description = "The URL of the APIM instance"
-}
-
-variable "Frontend_auth0_base_url" {
-  type        = string
-  description = "The base URL of the Auth0 instance"
-}
-
-variable "Frontend_auth0_client_id" {
-  type        = string
-  description = "The client ID of the Auth0 instance"
-}
-
-variable "Frontend_auth0_client_secret" {
-  type        = string
-  description = "The client secret of the Auth0 instance"
-}
-
-variable "Frontend_auth0_issuer_base_url" {
-  type        = string
-  description = "The issuer base URL of the Auth0 instance"
-}
-
-variable "Frontend_auth0_secret" {
-  type        = string
-  description = "The secret of the Auth"
-}
-# Personalisation MS Environment Variables
-
-variable "Personalisation_MONGO_URL" {
-  type        = string
-  description = "value of the mongo url"
 }
 
 variable "WEBSITES_ENABLE_APP_SERVICE_STORAGE" {
