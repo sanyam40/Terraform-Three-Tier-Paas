@@ -13,15 +13,15 @@ resource "azurerm_api_management" "apim" {
   }
 }
 
-resource "azurerm_api_management_logger" "apim-logger" {
-  count               = var.deploy_main_resource_group && var.deploy_apim ? 1 : 0
-  name                = "${var.environment}-${var.api_management_name}-logger"
-  resource_group_name = azurerm_resource_group.rg-main[count.index].name
-  api_management_name = azurerm_api_management.apim[count.index].name
-  application_insights {
-    instrumentation_key = azurerm_application_insights.appinsights[count.index].instrumentation_key
-  }
-}
+# resource "azurerm_api_management_logger" "apim-logger" {
+#   count               = var.deploy_main_resource_group && var.deploy_apim ? 1 : 0
+#   name                = "${var.environment}-${var.api_management_name}-logger"
+#   resource_group_name = azurerm_resource_group.rg-main[count.index].name
+#   api_management_name = azurerm_api_management.apim[count.index].name
+#   application_insights {
+#     instrumentation_key = azurerm_application_insights.appinsights[count.index].instrumentation_key
+#   }
+# }
 
 # // APIM API for PersonalisationMS
 # resource "azurerm_api_management_api" "personalisationms-api" {

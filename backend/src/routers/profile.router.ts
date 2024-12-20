@@ -7,8 +7,6 @@ import {
   deleteProfileParamsSchema,
   getProfileDataParamsSchema,
   getProfileParamsSchema,
-  updateProfileBodySchema,
-  updateProfileParamsSchema,
 } from "@/schemas";
 
 const profileRouter = express.Router();
@@ -35,12 +33,6 @@ profileRouter.get(
   "/users/:user_guid/profiles/:profile_guid",
   validateData({ params: getProfileDataParamsSchema }),
   profileController.getProfileData
-);
-
-profileRouter.patch(
-  "/users/:user_guid/profiles/:profile_guid/preferences",
-  validateData({ params: updateProfileParamsSchema, body: updateProfileBodySchema }),
-  profileController.updateProfileData
 );
 
 export default profileRouter;
