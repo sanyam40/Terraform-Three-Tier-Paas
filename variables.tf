@@ -12,7 +12,7 @@ variable "tenant_id" {
 # Resources Group Variables
 variable "resource_group_name" {
   type        = string
-  default     = "terraform-sanyam"
+  default     = "Iac-sn"
   description = "The name of the resource group in which to create the resources"
 }
 
@@ -50,7 +50,7 @@ variable "deploy_acr" {
 
 variable "acr_name" {
   type        = string
-  default     = "sanyamacr"
+  default     = "Iacacrsn"
   description = "The name of the Azure Container Registry"
 }
 
@@ -68,7 +68,7 @@ variable "deploy_apim" {
 }
 variable "api_management_name" {
   type        = string
-  default     = "test-apim"
+  default     = "IaC-apim-sn"
   description = "The name of the API Management instance"
 }
 
@@ -80,13 +80,13 @@ variable "apim_sku_name" {
 
 variable "publisher_name" {
   type        = string
-  default     = "xansr"
+  default     = "sanyam"
   description = "The name of the publisher"
 }
 
 variable "publisher_email" {
   type        = string
-  default     = "partner@xansrmedia.com"
+  default     = "sanyam21csu234@cse.ncuindia.edu"
   description = "The email of the publisher"
 }
 
@@ -97,7 +97,7 @@ variable "deploy_service_plan" {
 }
 variable "app_service_plan_name" {
   type        = string
-  default     = "asp-test"
+  default     = "Iac-asp-sn"
   description = "The name of the app service plan"
 }
 
@@ -121,12 +121,13 @@ variable "deploy_frontend_webapp" {
 
 variable "app_name_frontend" {
   type        = string
-  default     = "test-fe"
+  default     = "Iac-fe-sn"
   description = "The name of the frontend app"
 }
 
 variable "Frontend_Docker_Image" {
   type        = string
+  default = "sanyam/test-frontend:latest"
   description = "The Docker image for the frontend app"
 }
 
@@ -137,7 +138,7 @@ variable "deploy_personalisationms_webapp" {
 
 variable "app_name_personalisation" {
   type        = string
-  default     = "test-personalisation-ms"
+  default     = "Iac-personalisation-ms-sn"
   description = "The name of the Personalisation app"
 }
 
@@ -154,14 +155,14 @@ variable "deploy_application_insights" {
 
 variable "application_insights_name" {
   type        = string
-  default     = "test-appinsights"
+  default     = "Iac-appinsights-sn"
   description = "The name of the application insights instance"
 }
 
 # Storage Account Variables
 variable "storage_account_name" {
   type        = string
-  default     = "testblob"
+  default     = "iacblob"
   description = "The name of the storage account"
 }
 
