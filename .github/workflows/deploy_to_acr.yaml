@@ -42,8 +42,8 @@ jobs:
           username: ${{ secrets.DEFAULT_REGISTRY_USERNAME }}
           password: ${{ secrets.DEFAULT_REGISTRY_PASSWORD }}
 
-      - name: 📤 Build and push container image to registry
-        uses: docker/build-push-action@v6
+      - name: 📤 Build and push container image to registry (Frontend)
+        uses: docker/build-push-action@v3
         with:
           push: true
           tags: |
@@ -51,3 +51,13 @@ jobs:
             ${{ secrets.DEFAULT_REGISTRY_SERVER }}/playgroundiacfe:latest
           file: ./frontend/Dockerfile
           context: ./frontend
+      
+      - name: 📤 Build and push container image to registry (Backend)
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: |
+            ${{ secrets.DEFAULT_REGISTRY_SERVER }}/playgroundiacms:${{ env.VERSION_TAG }}
+            ${{ secrets.DEFAULT_REGISTRY_SERVER }}/playgroundiacms:latest
+          file: ./backend/Dockerfile
+          context: ./backend
