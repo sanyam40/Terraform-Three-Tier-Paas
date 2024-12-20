@@ -91,7 +91,7 @@ Ensure the following tools are installed and configured:
    ```  
 
 6. **Destroy Resources (Optional)**:  
-   Clean up all provisioned resources. 
+   Clean up all provisioned resources.
 
    ```sh  
    terraform destroy  
