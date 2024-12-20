@@ -1,7 +1,3 @@
-Here’s an improved and more polished version of the Three-Tier Application Deployment documentation:  
-
----
-
 # **Three-Tier Application Deployment on Azure Using Terraform**  
 
 This project demonstrates deploying a robust **Three-Tier Application** on **Azure** using **Terraform**. The stack includes:  
