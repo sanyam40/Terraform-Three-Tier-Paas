@@ -127,24 +127,7 @@ variable "app_name_frontend" {
 
 variable "Frontend_Docker_Image" {
   type        = string
-  default = "sanyam/test-frontend:latest"
   description = "The Docker image for the frontend app"
-}
-
-variable "deploy_personalisationms_webapp" {
-  type        = bool
-  description = "Whether to deploy the PersonalisationMS web app"
-}
-
-variable "app_name_personalisation" {
-  type        = string
-  default     = "Iac-personalisation-ms-sn"
-  description = "The name of the Personalisation app"
-}
-
-variable "Personalisation_Docker_Image" {
-  type        = string
-  description = "The Docker image for the Personalisation app"
 }
 
 # Application Insights Variables
@@ -187,4 +170,20 @@ variable "WEBSITES_ENABLE_APP_SERVICE_STORAGE" {
   type        = bool
   default     = false
   description = "Whether to enable app service storage"
+}
+
+variable "deploy_backend_webapp" {
+  type        = bool
+  description = "Whether to deploy the backend web app" 
+}
+
+variable "app_name_backend" {
+  type        = string
+  default     = "Iac-ms-sn"
+  description = "The name of the backend app"
+}
+
+variable "Backend_Docker_Image" {
+  type        = string
+  description = "The Docker image for the backend app"
 }
