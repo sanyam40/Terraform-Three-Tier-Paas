@@ -1,8 +1,40 @@
-# Terraform Project
+# Three-Tier Application Deployment on Azure using Terraform
 
-This repository contains the Terraform configuration files for creating and managing resources in Azure.
+This project demonstrates the deployment of a Three-Tier Application on Azure using Terraform. The application stack consists of:
 
-## Getting Started
+- Frontend: Next.js
+- Backend: Node.js microservices
+- Database: MongoDB
+
+## Infrastructure Setup
+
+The infrastructure is provisioned using Terraform and includes:
+
+- Resource Group: To group all Azure resources.
+- Azure Container Registry (ACR): To store container images.
+- API Management (APIM): To manage and secure APIs.
+- Application Insights: To monitor application performance and availability.
+- Service Plan: Hosting plan for Azure Web Apps.
+- Storage Account: For static assets and general-purpose storage.
+- Web Apps: Hosting for the frontend and backend applications.
+
+## Repository Structure
+
+- .github/workflows: GitHub Actions workflows for CI/CD.
+- backend: Node.js microservices.
+- frontend: Next.js frontend.
+- .gitignore: Files and directories to ignore.
+- acr.tf: Azure Container Registry (ACR) configuration.
+- apim.tf: API Management (APIM) configuration.
+- application-insights.tf: Application Insights configuration.
+- main.tf: Core Resource Group configuration.
+- outputs.tf: Output variables.
+- providers.tf: Azure provider configuration.
+- service-plan.tf: Service Plan configuration.
+- storage-account.tf: Storage Account configuration.
+- terraform.tfvars: Terraform variables.
+- variables.tf: [variables.tf](variables.tf) Input variables.
+- webapps.tf: [webapp.tf](webapps.tf) Web Apps configuration.
 
 ### Prerequisites
 
@@ -13,28 +45,6 @@ This repository contains the Terraform configuration files for creating and mana
 
 1. Clone this repository
 2. Navigate to the repository directory
-
-## Resources
-
-This Terraform configuration creates the following resources:
-
-- Providers : Configured in [providers.tf](providers.tf)
-- Resource Group: Configured in [main.tf](main.tf) [Core Resource Group / Main Resource Group]
-- Variables : Configured in [variables.tf](variables.tf)
-- Variables Secret Values : Configured in [terraform.tfvars](terraform.tfvars)
-- Outputs : Configured in [outputs.tf](outputs.tf)
-
-### Core Resources Group SKU's
-
-- ACR : Configured in [acr.tf](acr.tf)
-- APIM : Configured in [apim.tf](apim.tf)
-- Storage Accounts : Configured in [storage-account.tf](storage-account.tf)
-
-### Main Resource Group SKU's
-
-- webapps : Configured in [webapps.tf](webapps.tf)
-- Service Plan : Configured in [service-plan.tf](service-plan.tf)
-- Application Insights : Configured in [application-insights.tf](application-insights.tf)
 
 ## Usage
 
