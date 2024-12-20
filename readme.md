@@ -20,21 +20,21 @@ The infrastructure is provisioned using Terraform and includes:
 
 ## Repository Structure
 
-- .github/workflows: GitHub Actions workflows for CI/CD.
-- backend: Node.js microservices.
-- frontend: Next.js frontend.
-- .gitignore: Files and directories to ignore.
-- acr.tf: Azure Container Registry (ACR) configuration.
-- apim.tf: API Management (APIM) configuration.
-- application-insights.tf: Application Insights configuration.
-- main.tf: Core Resource Group configuration.
-- outputs.tf: Output variables.
-- providers.tf: Azure provider configuration.
-- service-plan.tf: Service Plan configuration.
-- storage-account.tf: Storage Account configuration.
-- terraform.tfvars: Terraform variables.
-- variables.tf: [variables.tf](variables.tf) Input variables.
-- webapps.tf: [webapp.tf](webapps.tf) Web Apps configuration.
+- .github/workflows: GitHub Actions workflows for CI/CD. ([.github/workflows](.github/workflows))
+- backend: Node.js microservices. ([/backend](/backend))
+- frontend: Next.js frontend. ([/frontend](/frontend))
+- .gitignore: Files and directories to ignore. ([.gitignore](.gitignore))
+- acr.tf: Azure Container Registry (ACR) configuration. ([acr.tf](acr.tf))
+- apim.tf: API Management (APIM) configuration. ([apim.tf](apim.tf))
+- application-insights.tf: Application Insights configuration. ([application-insights.tf](application-insights.tf))
+- main.tf: Core Resource Group configuration. ([main.tf](main.tf))
+- outputs.tf: Output variables. ([outputs.tf](outputs.tf))
+- providers.tf: Azure provider configuration. ([providers.tf](providers.tf))
+- service-plan.tf: Service Plan configuration. ([service-plan.tf](service-plan.tf))
+- storage-account.tf: Storage Account configuration. ([storage-account.tf](storage-account.tf))
+- terraform.tfvars: Terraform variables. ([terraform.tfvars](terraform.tfvars))
+- variables.tf: Input variables. ([variables.tf](variables.tf))
+- webapps.tf: Web Apps configuration. ([webapp.tf](webapps.tf))
 
 ### Prerequisites
 
