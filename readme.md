@@ -1,14 +1,13 @@
-# **Three-Tier Application Deployment on Azure Using Terraform**  
-
-## Tech Stack
-![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-
-## Description
+# **Three-Tier Paas Application Deployment on Azure Using Terraform**  
 This project demonstrates deploying a robust **Three-Tier Application** on **Azure** using **Terraform**. The stack includes:  
 
 - **Frontend**: Built with Next.js for a responsive and modern user interface.  
 - **Backend**: Node.js microservices to handle business logic.  
-- **Database**: MongoDB for efficient and scalable data storage.  
+- **Database**: MongoDB for efficient and scalable data storage. 
+
+## Tech Stack
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+ 
 
 ---
 
